@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "tf_policy_bucket" {
 }
 
 resource "aws_ebs_volume" "tf_policy_volume" {
-  availability_zone = "us-west-2"
+  availability_zone = "us-west-2a"
   size              = 20
 
 }
