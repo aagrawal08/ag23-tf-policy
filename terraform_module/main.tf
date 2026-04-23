@@ -1,6 +1,5 @@
-
 resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket"
+  bucket = "my-unique-bucket-name-for-testing"
 
   tags = {
     Name        = "My bucket"
@@ -10,7 +9,7 @@ resource "aws_s3_bucket" "b" {
 
 resource "aws_ebs_volume" "example" {
   availability_zone = "us-west-2a"
-  size              = 40
+  size              = 20
 
   tags = {
     Name = "HelloWorld"
@@ -18,13 +17,13 @@ resource "aws_ebs_volume" "example" {
 }
 
 resource "aws_db_instance" "default" {
-  allocated_storage    = 10
+  allocated_storage    = 40
   db_name              = "mydb"
   engine               = "mysql"
-  engine_version       = "5.7"
-  instance_class       = "db.t3.micro"
-  username             = "foo"
-  password             = "foobarbaz"
-  parameter_group_name = "default.mysql5.7"
+  engine_version       = "8.0.28"
+  instance_class       = "db.t3.small"
+  username             = "myuser"
+  password             = "mypassword"
+  parameter_group_name = "default.mysql8.0"
   skip_final_snapshot  = true
 }
