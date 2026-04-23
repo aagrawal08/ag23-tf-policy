@@ -9,7 +9,4 @@ output "ebs_volume_id" {
   value       = aws_ebs_volume.tf_policy_volume
 }
 
-output "db_instance_address" {
-  description = "The address of the DB instance"
-  value       = aws_db_instance.tf_policy_db.address
-}
+
