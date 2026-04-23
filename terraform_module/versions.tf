@@ -37,10 +37,6 @@ terraform {
       source  = "hashicorp/local"
       version = "~> 2.4.0"
     }
-    terracurl = {
-      source  = "devops-rob/terracurl"
-      version = "~> 1.1.0"
-    }
     jq = {
       source  = "massdriver-cloud/jq"
       version = "~> 0.2.0"
